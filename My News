@@ -1,7 +1,8 @@
 <!--This is simple "About Me" page. Create originally for login/web hosting. 
     Oto prosta strona w stylu "O mnie". Stworzona pierwotnie jako zamiennik logowania i krótka informacja o hostingu
     © 2018 by Rafael Pszenny and published under "New" BSD licence.  
-    Include https://github.com/aFarkas/html5shiv, https://github.com/jacobwb/hashover and https://github.com/typekit/webfontloader libraries.-->
+    Include https://github.com/aFarkas/html5shiv, https://github.com/jacobwb/hashover and https://github.com/typekit/webfontloader libraries.
+    Inspired by https://www.w3schools.com/howto/howto_css_image_overlay_slide.asp-->
     
     <!DOCTYPE html>
 <html lang="pl-PL">
