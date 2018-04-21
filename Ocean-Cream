@@ -1,0 +1,45 @@
+<html>
+    <!-- Based on aDOBE bRACKETS EXAMPLE -->
+    <head>
+        <title></title>
+    <style>
+        html {
+    background-color: darkslateblue
+}
+
+body {
+    background-color: beige;
+    margin: auto;
+    max-width: 60%;
+    padding: 2em 2em 4em;
+}
+p {
+	font-size: calc(12px + 0.55vw);
+    line-height: calc(22px + 0.55vw);
+    font-family: Raleway, sans;
+     color:#333
+}
+/* https://stackoverflow.com/questions/23984629/how-to-set-min-font-size-in-css */ </style>
+    </head>
+<body>
+    <p>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum odio eget euismod aliquet. Nunc eget lobortis arcu. Suspendisse non laoreet mi. Cras lacinia, mauris nec tincidunt convallis, lacus nunc rhoncus elit, ac pretium diam nisi eget purus. Nam non lobortis ex. Integer bibendum eget purus ac interdum. In feugiat et massa at mattis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean a dui a dui fermentum aliquam at ut nisi. Suspendisse efficitur a ligula non feugiat. Curabitur at aliquet dui. Mauris lacus neque, volutpat eget sagittis sed, molestie at neque. </p>
+    <p>Nullam dignissim finibus faucibus. Nulla maximus turpis erat, euismod cursus arcu convallis eget. Curabitur non eros hendrerit, blandit lectus sed, mattis mauris. Ut lacinia quis tellus ac pulvinar. Cras sit amet erat lobortis, interdum velit vitae, rhoncus enim. Nulla ipsum ante, congue in mi eget, sollicitudin commodo metus. Quisque id ornare lorem, scelerisque commodo massa. Etiam tristique luctus nibh, id pretium nisi hendrerit fringilla. Praesent vitae ligula sed eros pretium commodo at a arcu. Aenean convallis posuere fermentum. Fusce hendrerit eget orci id sollicitudin. Vestibulum tellus nunc, convallis non elementum a, dapibus non dolor. In gravida eget quam vitae tristique. </p>
+    <p>Donec mauris sem, blandit vel mattis in, iaculis a ligula. Pellentesque lacus ligula, blandit rhoncus lorem vitae, blandit ullamcorper dolor. Proin vitae aliquet turpis. Pellentesque sit amet euismod orci, sit amet mollis ipsum. Vivamus porta porta vehicula. Cras vitae blandit erat, ut condimentum lacus. Maecenas aliquet orci diam, ut fringilla ex consequat vel. Ut quis mi ante. Cras et molestie ante, ac consequat arcu. Quisque maximus imperdiet iaculis. Mauris finibus in massa sollicitudin porttitor. Nam eu ante malesuada, facilisis massa vel, lacinia erat. Nunc cursus sagittis tortor, vitae pharetra purus sodales ac. </p>
+    </body>
+    <footer>
+        <!-- https://github.com/typekit/webfontloader -->
+  <script>
+      WebFontConfig = {
+  google: {
+    families: ['Raleway:500'],
+   },
+  active: function() {
+    sessionStorage.fonts = true;
+  },
+      }
+</script>
+<script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    </footer>
+</html>
