@@ -10,12 +10,12 @@
 body {
     background-color: beige;
     margin: auto;
-    max-width: 60%;
+    max-width: 75%;
     padding: 2em 2em 4em;
 }
 p {
-	font-size: calc(12px + 0.55vw);
-    line-height: calc(22px + 0.55vw);
+	font-size: calc(14px + 0.4vw);
+    line-height: calc(22px + 0.8vw);
     font-family: Raleway, sans;
      color:#333
 }
@@ -43,5 +43,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc bibendum odio eget
 <script async src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     </footer>
 </html>
-
-   <!-- 75% width + golden ratio font size, important ! -->
