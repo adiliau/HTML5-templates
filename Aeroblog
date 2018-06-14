@@ -1,0 +1,104 @@
+  <!-- Original Coffee-Cream template with 1024x768 resolutioṇ ©2016-2017 -->
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+
+<head>
+    <meta charset=UTF-8>
+    <title><?php the_title();?></title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href=feed rel=alternate type=application/rss+xml title="Kanał RSS" />
+    <link rel="amphtml" href="<?php the_permalink();?>amp/" />
+<meta name="description" content="<?php $post = get_post(get_the_ID()); echo strip_tags(substr($post->post_content,0 , 150)); ?>">
+    <style>
+@font-face{font-family:'Raleway';font-style:normal;font-weight:500;src:local('Raleway Medium'),local('Raleway-Medium'),url(https://fonts.gstatic.com/s/raleway/v11/Li18TEFObx_yGdzKDoI_ciEAvth_LlrfE80CYdSH47w.woff2) format('woff2')}@media screen{a{color:#000}ul,li{line-height:1cm}textarea,input{max-width:90%}.menu-menu-container ul li:hover > ul{display:block}ul.sub-menu{display:none}main.poezja{text-align:center}nav img{width:auto;border:0;height:auto;border-radius:0;padding:0}article p a{letter-spacing:3px;text-decoration:none;color:#FFC;background-color:#3a5f0b;margin-left:8px;border-radius:5px}}@media screen and (min-width:1000px){article{font-family:'Raleway',sans-serif;font-size:19px;line-height:29px;color:#333;max-width:100%;padding:1.5cm;background-color:#faf7ed;float:right;border-radius:25px;max-width:596px;margin:40px}html,aside,aside a,nav,nav a,footer a{background-color:#2a1c01;color:#fff;width:1000px;font-family:cursive;font-size:small;line-height:21px}nav{width:225px}.menu-menu-container ul{list-style-type:none;margin:auto;padding:0;overflow:auto;background-color:#cfb77b;border-radius:25px;font-size:medium;font-family:"Comic Sans MS",cursive}.menu-menu-container li{float:left}.menu-menu-container li a{display:block;text-align:center;padding:14px 16px;text-decoration:none}.menu-menu-container li a:hover{background-color:#7b93cf;color:#fff}}@media all{img{width:250px;border:ridge;text-align:center;padding:10px 20px;height:200px;border-radius:15px}}@media print{h1{text-align:center}article{margin:0 auto}div#respond.comment-respond,nav,div.readoffline-embed,aside,.menu-menu-container,footer{display:none}}@media screen and (max-width:999px){body{    max-width: 92%;
+    margin: auto;
+    background-color: #2a1c01;}main,div.menu-menu-container{    background-color: #faf7ed;
+    padding: 10px;
+    max-width: 97%;}}</style>
+    <?php wp_nav_menu(array( 'onliniak'=>'Główne'));?>
+    <main <?php body_class();?>>     
+   <article>
+            <?php if(have_posts()):while(have_posts()):the_post();?>
+            <h1><a href=<?php the_permalink();?>><?php the_title();?></a></h1>
+            <?php if(has_post_thumbnail()){the_post_thumbnail( 'post-thumbnails');}?>
+            <?php the_content(); ?>
+            <?php wp_link_pages();?>Dodał(a) :
+       <a href="<?php echo get_author_posts_url( get_the_author_meta( 'ID' ), get_the_author_meta( 'user_nicename' ) ); ?>"> 
+                <?php the_author(); ?>
+            </a> 
+            <br> Kategoria
+            <?php the_category( ', ');?>
+            <br>
+            <?php single_tag_title( 'Tag : ');?>
+            <?php comments_template();?>
+            <?php endwhile;else:?>
+            <p>
+                <?php _e( 'Nie znaleziono postów spełniających podane kryteria.');?>
+            </p>
+            <?php endif;?>
+        </article>
+        <nav><strong>Chronologicznie</strong>
+
+            <p>Następny wpis :
+                <br>
+                <?php next_post_link();?>
+            </p>
+            <p>Poprzedni wpis :
+                <br>
+                <?php previous_post_link();?>
+            </p><strong>W obecnej kategorii</strong>
+            <p> Następny wpis :
+                <br>
+                <?php next_post_link( '%link', '%title » ',TRUE);?>
+            </p>
+            <p>Poprzedni wpis :
+                <br>
+                <?php previous_post_link( '%link', '« %title',TRUE);?>
+            </p>
+            <?php single_tag_title( '<strong>Tag</strong> ');?>
+            <p>
+                <?php next_post_link( '%link', '%title » ',TRUE, ' ', 'post_format');?>
+            </p>
+            <p>
+                <?php previous_post_link( '%link', '« %title',TRUE, ' ', 'post_format');?>
+            </p>
+<hr>
+<strong> Podziel się </strong>
+<br>
+    <a href="https://plus.google.com/share?url=<?php the_permalink();?>"  class="sc-btn sc--tiny sc--google-plus">
+      <span class="sc-icon">
+        <svg viewBox="0 0 33 33" width="25" height="25" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M 17.471,2c0,0-6.28,0-8.373,0C 5.344,2, 1.811,4.844, 1.811,8.138c0,3.366, 2.559,6.083, 6.378,6.083 c 0.266,0, 0.524-0.005, 0.776-0.024c-0.248,0.475-0.425,1.009-0.425,1.564c0,0.936, 0.503,1.694, 1.14,2.313 c-0.481,0-0.945,0.014-1.452,0.014C 3.579,18.089,0,21.050,0,24.121c0,3.024, 3.923,4.916, 8.573,4.916 c 5.301,0, 8.228-3.008, 8.228-6.032c0-2.425-0.716-3.877-2.928-5.442c-0.757-0.536-2.204-1.839-2.204-2.604 c0-0.897, 0.256-1.34, 1.607-2.395c 1.385-1.082, 2.365-2.603, 2.365-4.372c0-2.106-0.938-4.159-2.699-4.837l 2.655,0 L 17.471,2z M 14.546,22.483c 0.066,0.28, 0.103,0.569, 0.103,0.863c0,2.444-1.575,4.353-6.093,4.353 c-3.214,0-5.535-2.034-5.535-4.478c0-2.395, 2.879-4.389, 6.093-4.354c 0.75,0.008, 1.449,0.129, 2.083,0.334 C 12.942,20.415, 14.193,21.101, 14.546,22.483z M 9.401,13.368c-2.157-0.065-4.207-2.413-4.58-5.246 c-0.372-2.833, 1.074-5.001, 3.231-4.937c 2.157,0.065, 4.207,2.338, 4.58,5.171 C 13.004,11.189, 11.557,13.433, 9.401,13.368zM 26,8L 26,2L 24,2L 24,8L 18,8L 18,10L 24,10L 24,16L 26,16L 26,10L 32,10L 32,8 z"></path></g></svg>
+      </span>
+    </a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink();?>" class="sc-btn sc--facebook">
+      <span class="sc-icon">
+        <svg viewBox="0 0 33 33" width="25" height="25" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M 17.996,32L 12,32 L 12,16 l-4,0 l0-5.514 l 4-0.002l-0.006-3.248C 11.993,2.737, 13.213,0, 18.512,0l 4.412,0 l0,5.515 l-2.757,0 c-2.063,0-2.163,0.77-2.163,2.209l-0.008,2.76l 4.959,0 l-0.585,5.514L 18,16L 17.996,32z"></path></g></svg>
+      </span>
+    </a>
+ <a href="https://twitter.com/share?url=<?php the_permalink();?>" class="sc-btn sc--round sc--twitter">
+      <span class="sc-icon">
+        <svg viewBox="0 0 33 33" width="25" height="25" fill="whitesmoke" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M 32,6.076c-1.177,0.522-2.443,0.875-3.771,1.034c 1.355-0.813, 2.396-2.099, 2.887-3.632 c-1.269,0.752-2.674,1.299-4.169,1.593c-1.198-1.276-2.904-2.073-4.792-2.073c-3.626,0-6.565,2.939-6.565,6.565 c0,0.515, 0.058,1.016, 0.17,1.496c-5.456-0.274-10.294-2.888-13.532-6.86c-0.565,0.97-0.889,2.097-0.889,3.301 c0,2.278, 1.159,4.287, 2.921,5.465c-1.076-0.034-2.088-0.329-2.974-0.821c-0.001,0.027-0.001,0.055-0.001,0.083 c0,3.181, 2.263,5.834, 5.266,6.438c-0.551,0.15-1.131,0.23-1.73,0.23c-0.423,0-0.834-0.041-1.235-0.118 c 0.836,2.608, 3.26,4.506, 6.133,4.559c-2.247,1.761-5.078,2.81-8.154,2.81c-0.53,0-1.052-0.031-1.566-0.092 c 2.905,1.863, 6.356,2.95, 10.064,2.95c 12.076,0, 18.679-10.004, 18.679-18.68c0-0.285-0.006-0.568-0.019-0.849 C 30.007,8.548, 31.12,7.392, 32,6.076z"></path></g></svg>
+      </span>
+    </a>
+        </nav>
+<select name="forma" onchange="location = this.value;">
+ <option value="#">Zobacz pozostałe motywy</option>
+ <option value="?theme_changer=aeroblog1">AeroBlog One</option>
+ <option value="?theme_changer=aeroblog-classic">AeroBlog Classic</option>
+ <option value="?theme_changer=aeroblog-fly">AeroBlog Fly</option>
+ <option value="amp">AMP</option>
+</select>
+<hr>
+<select name="forma" onchange="location = this.value;">
+ <option value="#">Translate me with ... *</option>
+ <option value="https://translate.google.pl/translate?sl=pl&tl=en&js=y&prev=_t&hl=pl&ie=UTF-8&u=<?php the_permalink();?>&edit-text=&act=url">Google</option>
+ <option value="http://www.microsofttranslator.com/bv.aspx?&lo=TP&from=&to=en&a=<?php the_permalink();?>">Microsoft (no ssl)</option>
+ <option value="https://z5h64q92x9.net/proxy_u/pl-en.en/themes.onliniak.ct8.pl/<?php echo $_SERVER['REQUEST_URI']; ?>">Yandex (ß)</option>
+</select>
+<br>* By default, we translate into English language.<br>
+        <?php dynamic_sidebar( 'sidebar');?>
+
+        <footer> Motyw AeroBlog Classic znajdziesz <a href="http://themes.onliniak.ct8.pl/">tutaj</a>
+<br>CC BY 4.0     </footer>
+    </main>
+</html>
